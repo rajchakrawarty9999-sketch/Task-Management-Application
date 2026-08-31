@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: #07080a;
+    color: #cbd5e1;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-image: 
+      radial-gradient(at 15% 5%, rgba(207, 168, 86, 0.045) 0px, transparent 50%),
+      radial-gradient(at 85% 15%, rgba(207, 168, 86, 0.035) 0px, transparent 45%),
+      radial-gradient(at 50% 90%, rgba(207, 168, 86, 0.025) 0px, transparent 60%);
+    background-attachment: fixed;
+  }
+}
+
+/* Safe area support for iOS / modern mobile notches & home indicators */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Luxury Obsidian & Gold Surface System */
+.surface-card {
+  background: #0d0f15;
+  border: 1px solid rgba(255, 255, 255, 0.065);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.surface-card:hover {
+  border-color: rgba(207, 168, 86, 0.35);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.8), 0 0 16px rgba(207, 168, 86, 0.1), inset 0 1px 0 rgba(207, 168, 86, 0.15);
+  transform: translateY(-1.5px);
+}
+
+/* Metallic Champagne Gold Buttons */
+.btn-gold {
+  background: linear-gradient(180deg, #edd295 0%, #caa457 50%, #af842f 100%);
+  color: #120d04;
+  font-weight: 700;
+  border: 1px solid rgba(255, 240, 185, 0.45);
+  box-shadow: 0 2px 14px rgba(202, 164, 87, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(180deg, #f4db9f 0%, #d5ae5e 50%, #ba8e35 100%);
+  box-shadow: 0 4px 20px rgba(202, 164, 87, 0.45), 0 0 10px rgba(237, 210, 149, 0.3);
+  transform: translateY(-0.5px);
+}
+
+.btn-gold:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Glass with Gold Border Buttons */
+.btn-dark-gold {
+  background: #0f1118;
+  border: 1px solid rgba(202, 164, 87, 0.28);
+  color: #e2e8f0;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn-dark-gold:hover {
+  background: #141722;
+  border-color: rgba(202, 164, 87, 0.55);
+  color: #edd295;
+  box-shadow: 0 0 12px rgba(202, 164, 87, 0.15);
+}
+
+/* Active Navigation Item */
+.nav-item-active {
+  background: linear-gradient(90deg, rgba(202, 164, 87, 0.16) 0%, rgba(202, 164, 87, 0.03) 100%);
+  border: 1px solid rgba(202, 164, 87, 0.42);
+  color: #edd295;
+  box-shadow: 0 0 16px rgba(202, 164, 87, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Badges */
+.badge-category {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+}
+
+.badge-urgent {
+  background-color: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+}
+
+.badge-high {
+  background-color: rgba(202, 164, 87, 0.12);
+  border: 1px solid rgba(202, 164, 87, 0.3);
+  color: #edd295;
+}
+
+.badge-medium {
+  background-color: rgba(202, 164, 87, 0.10);
+  border: 1px solid rgba(202, 164, 87, 0.25);
+  color: #edd295;
+}
+
+.badge-low {
+  background-color: rgba(148, 163, 184, 0.10);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #94a3b8;
+}
+
+/* Inputs */
+.gold-input {
+  background-color: #0b0c10;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  transition: all 0.15s ease;
+}
+
+.gold-input:hover {
+  border-color: rgba(202, 164, 87, 0.3);
+}
+
+.gold-input:focus {
+  outline: none;
+  background-color: #0e1016;
+  border-color: #caa457;
+  box-shadow: 0 0 0 1px #caa457, 0 0 14px rgba(202, 164, 87, 0.2);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(202, 164, 87, 0.22);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(202, 164, 87, 0.45);
+}
+
+/* Hide scrollbar for clean horizontal snap sliders on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
