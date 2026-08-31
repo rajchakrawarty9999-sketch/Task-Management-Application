@@ -135,7 +135,7 @@ const MainLayout = () => {
 
       {/* Main Content Container with fluid dynamic margins */}
       <div 
-        className={`flex-1 flex flex-col min-h-screen w-full min-w-0 max-w-[100vw] overflow-x-hidden transition-all duration-300 ease-out ${
+        className={`flex-1 flex flex-col min-h-screen min-w-0 transition-all duration-300 ease-out ${
           isSidebarCollapsed ? 'ml-0' : 'ml-0 lg:ml-[240px] xl:ml-[260px]'
         }`}
       >

@@ -231,18 +231,18 @@ export const KanbanBoard = () => {
         </div>
       )}
 
-      {/* Horizontal Scrollable Kanban Columns Container (Mobile swipeable / Desktop grid) */}
-      <div className="w-full overflow-x-auto pb-4 pt-1 flex md:grid md:grid-cols-2 xl:grid-cols-4 gap-3.5 snap-x snap-mandatory scrollbar-thin">
-        <div className="min-w-[285px] max-w-[310px] md:min-w-0 md:max-w-none flex-shrink-0 md:flex-shrink snap-center">
+      {/* Horizontal Scrollable Kanban Columns Container (Mobile swipeable / Desktop fluid) */}
+      <div className="w-full overflow-x-auto pb-4 pt-1 flex gap-3.5 sm:gap-4 snap-x sm:snap-none snap-mandatory scrollbar-thin h-full min-h-[60vh]">
+        <div className="w-[85vw] sm:w-[320px] lg:w-auto lg:flex-1 lg:min-w-[240px] flex-shrink-0 snap-center h-full">
           <KanbanColumn status="backlog" title="Backlog" tasks={backlogTasks} />
         </div>
-        <div className="min-w-[285px] max-w-[310px] md:min-w-0 md:max-w-none flex-shrink-0 md:flex-shrink snap-center">
+        <div className="w-[85vw] sm:w-[320px] lg:w-auto lg:flex-1 lg:min-w-[240px] flex-shrink-0 snap-center h-full">
           <KanbanColumn status="in_progress" title="In Progress" tasks={inProgressTasks} />
         </div>
-        <div className="min-w-[285px] max-w-[310px] md:min-w-0 md:max-w-none flex-shrink-0 md:flex-shrink snap-center">
+        <div className="w-[85vw] sm:w-[320px] lg:w-auto lg:flex-1 lg:min-w-[240px] flex-shrink-0 snap-center h-full">
           <KanbanColumn status="in_review" title="In Review" tasks={inReviewTasks} />
         </div>
-        <div className="min-w-[285px] max-w-[310px] md:min-w-0 md:max-w-none flex-shrink-0 md:flex-shrink snap-center">
+        <div className="w-[85vw] sm:w-[320px] lg:w-auto lg:flex-1 lg:min-w-[240px] flex-shrink-0 snap-center h-full">
           <KanbanColumn status="completed" title="Done" tasks={completedTasks} />
         </div>
       </div>
