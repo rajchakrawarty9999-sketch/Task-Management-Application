@@ -55,8 +55,8 @@
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/Hishakti07/Task-Management.git
-cd Task-Management
+git clone https://github.com/rajchakrawarty9999-sketch/Task-Management-Application.git
+cd Task-Management-Application
 ```
 
 ### 2. Start Backend Server
@@ -83,6 +83,24 @@ npm run dev
 2. Go to **SQL Editor**.
 3. Run the complete schema script from [`supabase_schema.sql`](supabase_schema.sql).
 4. Tables for `users`, `tasks`, `notifications`, `calendar_events`, and `activities` with Row Level Security (RLS) and Realtime will be ready immediately.
+
+---
+
+## 🌐 Deployment Guide
+
+### Frontend (Vercel)
+The project includes a `vercel.json` configured for zero-config Vite deployments.
+1. Go to [Vercel](https://vercel.com).
+2. Import your GitHub repository (`Task-Management-Application`).
+3. Vercel will automatically detect the Vite build settings and deploy the app.
+
+### Backend (Render/Railway)
+*Note: Because the backend uses WebSockets (`socket.io`), it should not be deployed on Vercel's Serverless Functions.*
+1. Go to [Render](https://render.com) or [Railway](https://railway.app).
+2. Create a new Web Service and link your GitHub repository.
+3. Set the Root Directory to `backend`.
+4. Build command: `npm install`
+5. Start command: `npm start`
 
 ---
 
